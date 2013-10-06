@@ -1,0 +1,241 @@
+@charset "utf-8";
+/* CSS Document */
+a:hover {
+	color: #FF6600;
+}
+#focus {
+	width: 574px;
+	height: 292px;
+	overflow: hidden;
+	position: relative;
+	float: right;
+	margin-right: 6px;
+}
+#focus ul {
+	height: 292px;
+	position: absolute;
+	bottom: 0;
+}
+#focus ul li {
+	float: left;
+	width: 574px;
+	height: 292px;
+	overflow: hidden;
+	position: relative;
+}
+#focus ul li div {
+	position: absolute;
+	overflow: hidden;
+}
+#focus ul li p {
+	color: #FFF;
+	font-size: 12px;
+	height: 28px;
+	line-height: 28px;
+	position: absolute;
+	bottom: 0;
+	left: 15px;
+}
+#focus .btnBg {
+	background: red;
+}
+#focus .btn {
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	z-index: 10;
+}
+#focus .btn span {
+	background: #98D8FB;
+	width: 62px;
+	height: 10px;
+	cursor: pointer;
+	display: block;
+	float: left;
+	margin-left: 1px;
+	text-indent: -100em;
+	overflow: hidden;
+}
+#focus .preNext {
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	top: 90px;
+	background: url(../image/index/left.png) no-repeat 0 0;
+	cursor: pointer;
+}
+#focus .pre {
+	left: 0;
+	background: url(../image/index/right.png);
+}
+#focus .next {
+	right: 0;
+	background-position: right top;
+	background: url(../image/index/left.png);
+}
+.center_adv {
+	margin-top: 1px;
+	/*border-top: 1px solid #98D8FB;*/
+	margin-bottom: 1px;
+	/*border-bottom: 1px solid #98D8FB;*/
+}
+#reason {
+	background: repeat-x url(../image/index/which_bg.jpg);
+	width: 385px;
+	color: #3870AD;
+	margin-top: 5px;
+	margin-left: 6px;
+	border: 1px solid #A6C9EF;
+	height: 290px;
+}
+
+#reason h2 {
+	color: #E50019;
+	font-size: 18px;
+	height: 35px;
+	line-height: 35px;
+}
+#reason ul li {
+	background: url(../image/index/list_bg1.gif) no-repeat scroll 30px center transparent;
+	height: 35px;
+	padding-left: 10px;
+	line-height: 35px;
+}
+.leftblock {
+	float: left;
+	width: 308px;
+}
+.newsblock {
+	border: 1px solid #BFD9F2;
+	width: 300px;
+	float: left;
+	margin-left: 6px;
+}
+.newsblock h2 {
+	background: url("../image/index/title_bg.jpg") repeat-x scroll 0 0 transparent;
+	border-bottom: 1px solid #BFD9F2;
+	display: block;
+}
+.newsblock h2 span, .students h2 span {
+	display: block;
+	float: right;
+	height: 20px;
+	margin: 5px 3px 0 0;
+	width: 45px;
+}
+.newsblock h2 span a, .newsblock table tr td a, .studesc a {
+	color: #23669B;
+	font-size: 12px;
+	font-weight: normal;
+}
+.newsblock h2 span a:hover, .newsblock table tr td a:hover, .studesc a:hover {
+	color: #FF6600;
+}
+.newsblock ul {
+	padding-bottom: 4px;
+}
+.newsblock ul li,.faqblock ul li{
+	background: url("../image/index/icon2.jpg") 10px center no-repeat transparent;
+	height: 26px;
+	line-height: 26px;
+	padding-left: 20px;
+}
+.newsblock ul li a:hover {
+	color: #FF6600;
+}
+.students h2 {
+	background: url("../image/index/msfc_r.jpg") repeat-x scroll 0 0 transparent;
+	display: block;
+}
+.rightblock {
+	width: 655px;
+	float: left;
+	margin-left: 8px;
+}
+.students {
+	border: 1px solid #BFD9F2;
+	width: 655px;
+}
+.students h2 span a {
+	color: #23669B;
+	font-size: 12px;
+	font-weight: normal;
+}
+.studesc {
+	background: #F5F5F5;
+	text-align: left;
+	line-height: 20px;
+}
+.studentTable tr {
+	width: 100%;
+}
+.studentTable tr td {
+	text-align: center;
+	padding: 10px;
+}
+.studentTable tr td h3 {
+	text-align: left;
+	font-size: 14px;
+	color: #FF6600;
+}
+#img1 {
+	padding: 7px;
+	width: 95%;
+	margin: 0 auto;
+}
+#center120 {
+	
+}
+.goodclasses {
+	background: url("../image/index/msfc_r.jpg") repeat-x scroll 0 0 transparent;
+	float: left;
+	width: 640px;
+	border: 1px solid #BFD9F2;
+	margin-left: 7px;
+	border-top:0 none;
+	margin-top: 7px;
+	padding-bottom: 7px;
+}
+.goodclasses h2 span,.faqblock h2 span{
+	display: block;
+	float: right;
+	height: 20px;
+	margin: 5px 3px 0 0;
+	width: 45px;
+}
+.goodclasses h2 span a,.faqblock h2 span a{
+	color: #23669B;
+	font-size: 12px;
+	font-weight: normal;
+}
+.goodclasses ul li{
+	float: left;
+	width: 149px;
+	border: 1px solid #BFD9F2;
+	margin-left: 7px;
+	background: #F3FBFE;
+}
+.goodclasses ul li h2{
+	border-bottom:  1px solid #BFD9F2;
+	background: #FFFFFF;
+	text-align: center;
+	color:#0000EE;
+	font-size:12px;
+}
+.goodclasses ul li dl{
+	padding: 6px;
+}
+.faqblock{
+	background: url("../image/index/msfc_r.jpg") repeat-x scroll 0 0 transparent;
+	float: left;
+	width: 316px;
+	border: 1px solid #BFD9F2;
+	margin-left: 7px;
+	border-top:0 none;
+	margin-top: 7px;
+	padding-bottom: 7px;
+}
+.faqblock h2{
+	padding-top: 2px;
+	border-bottom: 1px solid #BFD9F2;
+}
