@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>朝之阳辅导学校</title>
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/download.css" />
+		<script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
+		<script src="js/download/download.js" type="text/javascript"></script>
+		<!-- Demo特殊需要的js -->
+		<script type="text/javascript">
+			$(function() {
+				$('#common_head').load("/gzhaoyang/head.html");
+				$('#common_foot').load("/gzhaoyang/foot.html");
+			});
+		</script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div id="common_head"></div>
+			<div class="main">
+				<p class="bread_crumb">
+					首页&nbsp;>>&nbsp;<span>资源下载</span>
+				</p>
+				<div id="downloadPane">
+					<h1><img src="image/download/20130914150138.jpg" /></h1>
+					<p>
+						您同样可以通过Nibiru客户端查看以下游戏，并且应用中提供了游戏的推荐下载方式xxxxxxx
+					</p>
+					<table id="downloadInfo">
+						<tr>
+							<td width="213px" class="dtitle">&nbsp;&nbsp;下载分类</td><td id="notice"></td>
+						</tr>
+						<tr>
+							<td width="213px"><ul id="downloadmenu"></ul></td>
+							<td style="background: white"><ul id="downloaddetail"></ul></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div id="common_foot"></div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>朝之阳辅导学校</title>
+		<script src="js/jquery-1.7.1.min.js"></script>
+		<script src="js/jquery-ui-1.8.19.custom.min.js"></script>
+		<script src="js/faq/faq.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/faq.css" />
+		<!-- Demo特殊需要的js -->
+		<script type="text/javascript">
+			$(function() {
+				$('#common_head').load("head.html");
+				$('#common_foot').load("foot.html");
+			});
+		</script>
+	</head>
+
+	<body>
+		<div class="wrap">
+			<div id="common_head"></div>
+			<div class="main">
+				<p class="bread_crumb">
+					首页&nbsp;>>&nbsp;<span>常见问题</span>
+				</p>
+				<div class="article-bg-2">
+					<div class="container">
+						<div class="help_bg"></div>
+						<div class="pr">
+							<div class="clearfix">
+
+								<div class="container-1">
+									<div class="support">
+
+										<input type="hidden" value="0" id="hideV" name="hideV">
+										<div class="title_1 support-current" style="font-size: 18px">
+											<img src="image/faq/20130914174605.jpg"/>
+										</div>
+										<div class="product-support-faqs">
+											<ul class="ul-01" id="product-support-faq-ul">
+
+											</ul>
+										</div>
+										<div class="page clearfix pb30" style="text-align: center;padding-top: 20px;padding-left: 110px;">
+											<a id="page0" onclick="change_page(0)" class="a-2"></a>
+											<a id="page1" onclick="change_page(5)" class="a-1"></a>
+											<a id="page2" onclick="change_page(10)" class="a-1"></a>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="common_foot"></div>
+		</div>
+	</body>
+</html>
