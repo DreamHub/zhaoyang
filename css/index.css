@@ -57,8 +57,8 @@ a:hover {
 	overflow: hidden;
 }
 #focus .preNext {
-	width: 80px;
-	height: 80px;
+	width: 50px;
+	height: 50px;
 	position: absolute;
 	top: 90px;
 	background: url(../image/index/left.png) no-repeat 0 0;

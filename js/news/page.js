@@ -79,7 +79,7 @@
 			});
 		}
 		
-		b.ajax = function ()　{
+		b.ajax = function (){
 			if(!c.isLoad) {
 				return self;	
 			}

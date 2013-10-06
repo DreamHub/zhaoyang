@@ -6,16 +6,9 @@ $(function() {
 		Fx : "down", //方向
 		Time : 40 //时间
 	});
-	$("#about_Nav ul li a").mouseenter(function() {
-		$(this).css("border-left-width", 1);
-		$(this).parent().css("border-left-width", 1);
-		$(this).animate({
-			"margin-left" : 5
-		}, 300);
-	}).mouseleave(function() {
-		$(this).parent().css("border-left-width", 0);
-		$(this).animate({
-			"margin-left" : 0
-		}, 500);
+	$("#about_Nav ul li").not(".now").mouseenter(function(){
+		$(this).toggleClass("now");
+	}).mouseleave(function(){
+		$(this).toggleClass("now");
 	});
 });

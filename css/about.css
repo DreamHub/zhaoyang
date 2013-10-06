@@ -7,11 +7,8 @@
 	width: 26%;
 }
 #about_Nav {
-	background: #C5E0FE;
 	width: 240px;
 	margin: 0 auto;
-	line-height: 40px;
-	border-top:1px solid #E4F0FC;
 }
 #notice {
 	width: 240px;
@@ -30,23 +27,32 @@
 #text a:hover {
 	text-decoration: underline;
 }
-#about_Nav ul li {
-	height: 40px;
-	border-bottom: 1px solid #E4F0FC;
-	background: #E4F0FC;
-	line-height: 40px;
-	text-align: center;
-	border-left: 1px solid #E4F0FC;
+#about_Nav ul{
+	background: #F3F3F3;
 }
-#about_Nav ul li a {
-	height: 100%;
-	width: 240px;
+.now{
+	background: #40A7C8;
+}
+#about_Nav ul li{
+	height:35px;
+	margin-top: 3px;
+}
+#about_Nav ul li a{
 	display: block;
-	border-left: 0 solid #E4F0FC;
-	background: #C5E0FE url("../image/about/nav_bg.png");
-	text-decoration: none;
-	color: #E7863D;
-	font-size:15px;
+	width: 100%;
+	height: 100%;
+	line-height: 35px;
+	position: relative;
+	padding-left: 55px;
+	font-size:13px;
+	color:#6D6D6D;
 }
-#about_Nav ul li a:hover{
+#about_Nav ul li a img{
+	position: absolute;
+	left: 25px;
+	top:6px;
+
+}
+#about_Nav .now a{
+	color:white;
 }
