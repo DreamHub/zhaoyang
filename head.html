@@ -13,10 +13,33 @@
 				queue : false
 			});
 		});
-	}); 
+		
+		
+		//$('#popDiv').css("left","200px");
+		//alert($(window).width());
+		//alert($(window).height());
+		$('#popDiv').hide();
+		$('#popDiv .closebt').click(function(){
+			$("#popDiv").fadeOut("slow");
+		});
+		setTimeout("popDialog()",4000);
+	});
+	function popDialog(){
+		var left=($(window).width()-400)/2-200;
+		var top=($(window).height()-200)/2-150;
+		$('#popDiv').css("left",left+"px");
+		$('#popDiv').css("top",top+"px");
+		$('#popDiv').show();
+		$('#popDiv').animate({"left":"+=200","top":"+=150"});
+	}
+	
 </script>
 <div id="floatMenu">
 	<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1169286799&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:1169286799:51" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
+</div>
+<div id="popDiv">
+	<a href="#" class="closebt"></a>
+	<a class="zixun" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1169286799&site=qq&menu=yes"></a>
 </div>
 <div class="head">
 	<div id="logo">
