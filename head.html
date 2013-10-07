@@ -13,16 +13,11 @@
 				queue : false
 			});
 		});
-		
-		
-		//$('#popDiv').css("left","200px");
-		//alert($(window).width());
-		//alert($(window).height());
 		$('#popDiv').hide();
 		$('#popDiv .closebt').click(function(){
 			$("#popDiv").fadeOut("slow");
 		});
-		setTimeout("popDialog()",4000);
+		//setTimeout("popDialog()",4000);
 	});
 	function popDialog(){
 		var left=($(window).width()-400)/2-200;
@@ -70,7 +65,7 @@
 			<a href="/zhaoyang/faq.html">常见问题</a>
 		</li>
 		<li>
-			<a href="#">公告</a>
+			<a href="/zhaoyang/notice.html">公告</a>
 		</li>
 		<li>
 			<a href="#">人才招聘</a>

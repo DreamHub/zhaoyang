@@ -10,7 +10,7 @@
 	height: 60px;
 	line-height: 60px;
 	margin: 0 auto;
-	background: no-repeat url('../image/news/20130817105153.jpg') 10px 2px;
+	padding-left: 10px;
 }
 #news_content{
 	margin: 0 10px;
@@ -133,6 +133,9 @@
 	vertical-align: middle;
 	cursor: pointer;
 }
+#lablesDiv{
+	margin-bottom: 10px;
+}
 #lablesdiv {
 	background: #CCC;
 	width: 220px;
@@ -140,6 +143,7 @@
 	margin: 0 auto;
 	padding: 10px;
 	line-height: 40px;
+	margin-bottom: 10px;
 }
 #lables {
 	margin: 0 auto;
@@ -156,7 +160,8 @@
 	line-height: 20px;
 }
 #text a{
-	color: #E47827;
+	/*color: #E47827;*/
+	color:#3A8195;
 }
 #text a:hover{
 	text-decoration: underline;
@@ -175,4 +180,12 @@
 #lables p span a {
 	text-decoration: none;
 	font-size: 16px;
+}
+#adv01Div{
+	width: 220px;
+	height: 200px;
+	margin: 0 auto;
+	padding: 10px;
+	line-height: 40px;
+	background:no-repeat url("../image/notice/20131007123035.jpg");
 }

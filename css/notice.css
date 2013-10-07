@@ -6,3 +6,28 @@
 	float: left;
 	width: 26%;
 }
+#adv01Div{
+	width: 220px;
+	height: 200px;
+	margin: 0 auto;
+	padding: 10px;
+	line-height: 40px;
+	background:no-repeat url("../image/notice/20131007123035.jpg");
+}
+#notice2{
+	width: 240px;
+	background: url("../image/news/notic_bg.jpg");
+	height: 246px;
+	margin: 10px auto;
+}
+#text li {
+	background: no-repeat url("../image/news/icon2.png") 0 7px;
+	padding-left: 10px;
+	line-height: 20px;
+}
+#text a {
+	color: #E47827;
+}
+#text a:hover {
+	text-decoration: underline;
+}
