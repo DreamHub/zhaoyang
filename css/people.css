@@ -1,0 +1,30 @@
+#shisheng {
+	width: 900px;
+	margin: 10px auto 10px;
+}
+#shisheng h2{
+	margin-bottom: 10px;
+}
+#shisheng1{
+	position: relative;
+}
+#shisheng1 div{
+	position: absolute;
+	left: 590px;
+	top:100px;
+	width: 100px;
+	height: 100px;
+}
+.toTeacher{
+	display: block;
+	width: 170px;
+	height: 60px;
+	background:no-repeat url("../image/people/peoples_10.gif") -5px -5px;
+}
+.toStudent{
+	display: block;
+	margin-top: 10px;
+	width: 170px;
+	height: 60px;
+	background:no-repeat url("../image/people/peoples_10.gif") -5px -82px;
+}
