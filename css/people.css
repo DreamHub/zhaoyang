@@ -109,6 +109,7 @@
 	float: left;
 	margin-left: 10px;
 	margin-top: 10px;
+	width: 300px;
 }
 .teaimg > a{
 	display: block;
@@ -139,8 +140,15 @@
 }
 .teadesc li{
 	line-height: 40px;
+	font-size:12px;
 }
 .teadesc li h4{
 	font-size:18px;
 	color:#D53E3F;
+}
+.teadesc li span{
+	font-style: italic;
+	color:#D53E3F;
+	font-size:14px;
+	font-weight: bold;
 }
