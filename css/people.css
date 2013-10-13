@@ -96,3 +96,51 @@
 	height: 60px;
 	line-height:60px;
 }
+.teacherli{
+	width: 670px;
+	background: #F1F8FC;
+	margin: 10px auto;
+	padding-bottom: 20px;
+}
+.teaimg{
+	float: left;
+}
+.teadesc{
+	float: left;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+.teaimg > a{
+	display: block;
+	border: 1px solid #2092A3;
+	margin-left: 20px;
+	margin-top: 10px;
+	text-align: center;
+	width: 198px;
+	height: 226px;
+}
+.teaimg p a:first-child{
+	display: block;
+	float: left;
+	width: 92px;
+	height: 38px;
+	background:no-repeat url("../image/teacher/tea1.gif");
+	margin-left: 20px;
+	margin-top: 10px;
+}
+.teaimg p a:last-child{
+	display: block;
+	float: left;
+	width: 92px;
+	height: 38px;
+	background:no-repeat url("../image/teacher/tea1.gif") -92px 0;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+.teadesc li{
+	line-height: 40px;
+}
+.teadesc li h4{
+	font-size:18px;
+	color:#D53E3F;
+}
