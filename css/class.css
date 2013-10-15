@@ -158,3 +158,28 @@ strong, b {
 font-weight: bold;
 }
 
+
+.allsort .mt {
+    background: none repeat scroll 0 0 #E8F7D4;
+    color: #4A8221;
+    font-weight: 700;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 5px;
+    padding-left: 60px;
+}
+
+.box1 .inner {
+    border-color: #B1E9A8;
+    border-style: solid;
+    border-width: 0 1px 1px;
+    height: 742px;
+}
+.inner {
+    padding: 5px;
+}
+
+.box1 h3 {
+    background: url("../image/class/cmt.jpg") no-repeat scroll left center rgba(0, 0, 0, 0);
+    height: 35px;
+}

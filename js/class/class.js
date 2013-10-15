@@ -1,3 +1,30 @@
+
+$(function() {
+	$.getJSON("js/class/srclass.js", function(data) {
+		deal_data(data);
+	});
+});
+
+function deal_data(myData) {
+	$('#allsortId').empty();
+	$.each(myData, function(i) {
+		$('#allsortId').append('<div style="background:none repeat scroll 0 0 #E8F7D4;color: #4A8221;font-weight: 700;height: 30px;line-height: 30px;margin-bottom: 5px;padding-left: 60px;">' + myData[i].schoolGrade  + '</div><div class="mc"></div>');
+		var thisMc = $('#allsortId .mc').eq(i);
+		var myDataI = myData[i];
+		$.each(myDataI.schoolContent, function(j) {
+			thisMc.append('<div class="left-name" style="color:#4a8221">' + myDataI.schoolContent[j].grade + '</div><div class="right-subject"></div>');
+			var thisSubjectJ = thisMc.find('.right-subject:last');
+			var schoolContent = myDataI.schoolContent[j];
+			var myClassList = schoolContent.classList;
+			$.each(myClassList, function(k) {
+				var classK = myClassList[k]; 
+				thisSubjectJ.append('<a href="' + classK.classHref + '" target="_blank">' +  classK.class + '</a>  ');
+			});	
+		});
+		
+	});
+}
+
 //搜索条件设置
 function goSearch(name, stage, grade, subject)
 {
@@ -17,7 +44,7 @@ function goSearch(name, stage, grade, subject)
         case '高考复习专区':name = '高考好帮手';grade = '全部年级';break;
     }
     */
-    window.location.href = 'http://127.0.0.1:8020/gzhaoyang/class/' + escape(grade) + '_' + escape(subject) + '_result.html';
+    window.location.href = 'http://127.0.0.1:8020/zhaoyangSVN/class/' + escape(grade) + '_' + escape(subject) + '_result.html';
     //else window.location.href = 'http://127.0.0.1:8020/gzhaoyang/class/result.html?product_name=' + escape(name);
 
     return false;
