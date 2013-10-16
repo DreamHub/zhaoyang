@@ -2,7 +2,8 @@
 	width:173px;
 }
 
-.col1, col2, .col3 {
+.col1, .col2, .col3 {
+	margin-top: 8px;
 	display: inline;
 	float: left;
 }
@@ -182,4 +183,16 @@ font-weight: bold;
 .box1 h3 {
     background: url("../image/class/cmt.jpg") no-repeat scroll left center rgba(0, 0, 0, 0);
     height: 35px;
+}
+
+.teachers {
+	border: 1px solid #BFD9F2;
+	width: 790px;
+}
+
+.col1-2 {
+    float: left;
+    margin-top: 8px;
+    margin-left: 8px;
+    width: 790px;
 }

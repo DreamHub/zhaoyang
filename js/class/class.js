@@ -3,6 +3,14 @@ $(function() {
 	$.getJSON("js/class/srclass.js", function(data) {
 		deal_data(data);
 	});
+	
+	$("#teachers_show_id").fsrPMD({
+		Event : 'mouseover', //事件
+		Id : 'teachers_show_id', //容器ID
+		Bq : 'td', //复制html标签
+		Fx : "left", //方向
+		Time : 10 //时间
+	});
 });
 
 function deal_data(myData) {
