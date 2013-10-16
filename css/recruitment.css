@@ -43,10 +43,10 @@
 }
 #text a{
 	/*color: #E47827;*/
-	color:#3A8195;
+	color:black;
 }
 #text a:hover{
-	text-decoration: underline;
+	color:#FF8200;
 }
 .recruitmentwarn{
 	width: 240px;
@@ -61,10 +61,17 @@
 	font-size:14px;
 	border-bottom: 3px solid #69CBF1;
 }
+.recruitmentwarn ul{
+	margin: 10px auto;
+}
 .recruitmentwarn ul li{
 	margin: 0 10px;
-	line-height:20px;
-	background: no-repeat url("../image/recruitment/12.gif");
+	line-height:25px;
+	background: no-repeat url("../image/recruitment/12.gif") 0 5px;
 	padding-left: 20px;
 	color:#4784B5;
+}
+.recruitmentwarn ul li span{
+	color:#FF8200;
+	font-weight: bold;
 }
