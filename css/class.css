@@ -2,10 +2,18 @@
 	width:173px;
 }
 
-.col1, .col2, .col3 {
+.col1, .col3 {
 	margin-top: 8px;
 	display: inline;
 	float: left;
+}
+
+.col2 {
+	display: inline;
+	float: left;
+    margin-top: 8px;
+    margin-left: 8px;
+    width: 790px;
 }
 
 * {
@@ -23,6 +31,14 @@
 	background: url(../image/class/title1.jpg) no-repeat 7px 2px;
 	line-height: 35px;
 }
+
+.speClatitle {
+	display: block;
+	text-indent: -9999px;
+	background: url(../image/class/speciallogo2.gif) no-repeat 7px 2px;
+	line-height: 35px;
+}
+
 
 .box1 .inner {
 	height: 742px;
@@ -45,7 +61,7 @@
 	border: 1px solid #b1e9a8;
 	background: snow;
 	padding: 0 0 5px 0;
-	height: 730px;
+	height: 650px;
 }
 
 .allsort {
@@ -106,8 +122,9 @@ line-height: 24px;
 
 .container {
 width: 610px;
+height: 600px;
 _width: 598px;
-margin: 11px auto;
+margin: 5px auto;
 overflow: hidden;
 zoom: 1;
 }
@@ -117,8 +134,8 @@ width: 300px;
 _width: 294px;
 float: left;
 margin-left: 5px;
-margin-top: 8px;
-margin-bottom: 8px;
+margin-top: 4px;
+margin-bottom: 5px;
 display: inline;
 }
 .item {
@@ -126,6 +143,7 @@ overflow: hidden;
 }
 .pict-lr {
 overflow: hidden;
+margin-top: 40px;
 }
 user agent stylesheetdiv {
 display: block;
@@ -174,7 +192,7 @@ font-weight: bold;
     border-color: #B1E9A8;
     border-style: solid;
     border-width: 0 1px 1px;
-    height: 742px;
+    height: 662px;
 }
 .inner {
     padding: 5px;
@@ -195,4 +213,170 @@ font-weight: bold;
     margin-top: 8px;
     margin-left: 8px;
     width: 790px;
+}
+
+.selected {
+    /*background: none repeat scroll 0 0 #FFFAFA;*/
+    border-color: #B1E9A8;
+    border-style: solid;
+    border-width: 1px 1px 0;
+    display: block;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    background-color: #FFFFFF;
+}
+
+.noBgImg {
+	background: none repeat scroll 0 0 #FFFAFA;
+}
+
+.bgImg {
+	background: url("../image/class/tab-bg.jpg") repeat-x scroll left top rgba(0, 0, 0, 0);
+}
+
+.noSelected {
+    /*background: url("../image/class/tab-bg.jpg") repeat-x scroll left top rgba(0, 0, 0, 0);*/
+    border-color: #B1E9A8;
+    border-style: solid;
+    border-width: 1px 1px 0;
+    display: block;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+}
+
+.idTabs ul {
+    overflow: hidden;
+    position: relative;
+    top: 5px;
+}
+
+.idTabs li {
+    float: left;
+    margin-right: 3px;
+    width: 99px;
+}
+
+.idTabs {
+	border: 1px solid #BFD9F2;
+	width: 790px;
+	height: 706px; 
+	padding-right: -4px;
+}
+
+li {
+    list-style: none outside none;
+}
+
+ul li {
+    line-height: 25px;
+}
+
+.box2 {
+	background-color: #DCF5D7;
+}
+
+
+#window
+{
+	position: absolute;
+	left: 200px;
+	top: 100px;
+	width: 400px;
+	/*height: 300px;*/
+	overflow: hidden;
+	/*display: none;*/
+}
+#windowTop
+{
+	height: 30px;
+	overflow: 30px;
+	background-image: url(../image/class/window_top_end.png);
+	background-position: right top;
+	background-repeat: no-repeat;
+	position: relative;
+	overflow: hidden;
+	cursor: move;
+}
+#windowTopContent
+{
+	margin-right: 13px;
+	background-image:url(../image/class/window_top_start.png);
+	background-position:left top;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	height: 30px;
+	line-height: 30px;
+	text-indent: 10px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 14px;	
+	color: #6caf00;
+}
+#windowMin
+{
+	position: absolute;
+	right: 25px;
+	top: 10px;
+	cursor: pointer;
+}
+#windowMax
+{
+	position: absolute;
+	right: 25px;
+	top: 10px;
+	cursor: pointer;
+	display: none;
+}
+#windowClose
+{
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	cursor: pointer;
+}
+#windowBottom
+{
+	position: relative;
+	height: 270px;
+	background-image: url(../image/class/window_bottom_end.png);
+	background-position: right bottom;
+	background-repeat: no-repeat;
+}
+#windowBottomContent
+{
+	position: relative;
+	height: 270px;
+	background-image: url(../image/class/window_bottom_start.png);
+	background-position: left bottom;
+	background-repeat: no-repeat;
+	margin-right: 13px;
+}
+#windowResize
+{
+	position: absolute;
+	right: 3px;
+	bottom: 5px;
+	cursor: se-resize;
+}
+#windowContent
+{
+	position:absolute;
+	top: 30px;
+	left: 10px;
+	width: auto;
+	height: auto;
+	overflow: auto;
+	margin-right: 10px;
+	border: 1px solid #6caf00;
+	height: 255px;
+	width: 375px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	background-color: #fff;
+}
+#windowContent *
+{
+	margin: 10px;
 }

@@ -4,13 +4,19 @@ $(function() {
 		deal_data(data);
 	});
 	
-	$("#teachers_show_id").fsrPMD({
-		Event : 'mouseover', //事件
-		Id : 'teachers_show_id', //容器ID
-		Bq : 'td', //复制html标签
-		Fx : "left", //方向
-		Time : 10 //时间
-	});
+    //获取选课中心课程内容
+    productContent('one','小学');
+    //获取排行
+    //changeRankList('one','小学');
+
+	// $("#teachers_show_id").fsrPMD({
+		// Event : 'mouseover', //事件
+		// Id : 'teachers_show_id', //容器ID
+		// Bq : 'td', //复制html标签
+		// Fx : "left", //方向
+		// Time : 10 //时间
+	// });
+	
 });
 
 function deal_data(myData) {
@@ -56,5 +62,106 @@ function goSearch(name, stage, grade, subject)
     //else window.location.href = 'http://127.0.0.1:8020/gzhaoyang/class/result.html?product_name=' + escape(name);
 
     return false;
+}
+
+function removeSelected(index) {
+	if (index == 'one') {
+		
+		$('#a_one').removeClass("bgImg");
+		$('#a_two').addClass("bgImg");
+		$('#a_three').addClass("bgImg");
+		
+	} else if (index == 'two') {
+		$('#a_two').removeClass("bgImg");
+		$('#a_one').addClass("bgImg");
+		$('#a_three').addClass("bgImg");
+	} else if (index == 'three') {
+		$('#a_three').removeClass("bgImg");
+		$('#a_two').addClass("bgImg");
+		$('#a_one').addClass("bgImg");/*
+		$('#a_three').removeClass("noSelected");
+		$('#a_two').addClass("noSelected");
+		$('#a_one').addClass("noSelected");
+		*/
+	}  
+}
+
+function productContent(index, stage){
+    $.getJSON("http://api.gopep.cn/products/ajaxProductResponse.php?callback=?", {type:'productContent', stage:stage}, function(data){
+        removeSelected(index);
+        if(!data)
+        {
+/*
+            if (stage == '灏忓') {
+            	$("#container_one").empty();	
+            } else if (stage == '鍒濅腑') {
+            	$("#container_two").empty();	
+            } else if (stage == '楂樹腑') {
+            	$("#container_three").empty();	
+            } */
+           
+			$(".container").empty();	
+        }
+        else
+        {
+            $(".container").empty();	
+            data = eval(data);
+            for(var i=0; i<data.length; i++)
+            {
+            var html = "<div class='item pict-lr'>\n";
+            html += "<div class='pic'><a href='http://api.gopep.cn/products/detail/"+ data[i].product_id +".html' target='_blank'><img height='130' width='90' src='image/class/shuxue_1a_n.png'/></a></div>";
+            html += "<p><a href='http://api.gopep.cn/products/detail/"+ data[i].product_id +".html' target='_blank'><strong>"+ data[i].product_shortname +"</strong></a></p>";
+
+            var lecturer = data[i].lecturers;
+            if(lecturer === null || lecturer === undefined || typeof lecturer == 'undefined') lecturer = '--';
+            html += "<p>主讲教师："+ lecturer +"</p>";
+
+            var subject = data[i].course_subject;
+            if(subject === null || subject === undefined || typeof subject == 'undefined') subject = '--';
+            html += "<p>科　　目：<a href=\"http://api.gopep.cn/products/result.html?course_subject="+ escape(subject) +"\" target='_blank'>"+ subject +"</a></p>";
+
+            var grade = (data[i].course_grade === undefined || typeof data[i].course_grade == 'undefined') ? undefined : data[i].course_grade;
+            if(data[i].course_term !=null && data[i].course_term !== undefined && typeof data[i].course_term != 'undefined') grade += data[i].course_term;
+            if(data[i].course_type !=null && data[i].course_type !== undefined && typeof data[i].course_type != 'undefined') grade = data[i].course_term + data[i].course_type ;
+            if(grade === null || grade === undefined || typeof grade == 'undefined') grade = '--';
+            html += "<p>年级学期："+ grade +"</p>";
+
+            html += "<p>使用期限：一年</p>";
+            html += "<p>学　　费：￥"+ data[i].current_price +"</p>";
+            html += "</div>";
+
+			/*
+			if (stage == '灏忓') {
+							$("#container_one").append(html);
+						} else if (stage == '鍒濅腑') {
+							$("#container_two").append(html);	
+						} else if (stage == '楂樹腑') {
+							$("#container_three").append(html);	
+						} */
+			
+			$("#container_" + index).append(html);	
+        }
+        }
+    });
+}
+
+function changeRankList(index, stage)
+{
+    $(".normal-list").text("数据载入中 ...");
+    $.getJSON("http://api.gopep.cn/products/ajaxProductResponse.php?callback=?", {type:'salerank', stage:stage}, function(data){
+        if(!data)
+        {
+            $(".normal-list").empty();
+        }
+        else
+        {
+            $(".normal-list").empty();
+            data = eval(data);
+            for(var i=0; i<data.length; i++)
+            {
+                $('.normal-list').append("<li><a href='http://api.gopep.cn/products/detail/"+ data[i].product_id +".html' title='"+ data[i].product_fullname +"'>"+ (i+1) +"."+ data[i].product_shortname +"</a></li>");
+            }
+        }
+    });
 }
 
