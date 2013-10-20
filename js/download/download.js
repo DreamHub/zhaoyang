@@ -38,7 +38,8 @@ $(function() {
 	});
 	$.getJSON("js/download/notice.js", function(data) {
 		notices = data;
-		$('#notice').text(data[index].content);
+		var str='<a href="'+data[index].href+'">'+data[index].content+'</a>';
+		$('#notice').html(str);
 		index++;
 		t = setTimeout("changeNotice()", 3000);
 	});
@@ -48,7 +49,8 @@ function changeNotice() {
 	if (index == notices.length) {
 		index = 0;
 	}
-	$('#notice').text(notices[index].content);
+	var str='<a href="'+notices[index].href+'">'+notices[index].content+'</a>';
+	$('#notice').html(str);
 	index++;
 	t = setTimeout("changeNotice()", 3000);
 }
