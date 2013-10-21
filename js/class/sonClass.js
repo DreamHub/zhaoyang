@@ -286,7 +286,7 @@ function deal_data(myData) {
 			var myClassList = schoolContent.classList;
 			$.each(myClassList, function(k) {
 				var classK = myClassList[k]; 
-				thisSubjectJ.append('<a href="' + classK.classHref + '" target="_self">' +  classK.class + '</a>  ');
+				thisSubjectJ.append('<a href="' + classK.classHref + '" target="_self">' +  'aaa' + '</a>  ');
 			});	
 		});
 		
