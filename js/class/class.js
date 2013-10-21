@@ -32,7 +32,7 @@ function deal_data(myData) {
 			var myClassList = schoolContent.classList;
 			$.each(myClassList, function(k) {
 				var classK = myClassList[k]; 
-				thisSubjectJ.append('<a href="' + classK.classHref + '" target="_blank">' +  classK.class + '</a>  ');
+				thisSubjectJ.append('<a href="' + classK.classHref + '" target="_blank">' + 'aaa' + '</a>  ');
 			});	
 		});
 		
