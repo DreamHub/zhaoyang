@@ -249,7 +249,11 @@
 	})(jQuery);
 
 $(function() {
-	$.getJSON("../js/class/srclass.js", function(data) {
+	
+	var flag = location.href.indexOf("?jsId");
+	var jsId = location.href.substr(flag+6);
+	
+	$.getJSON("../js/class/srclass_" + jsId + ".js", function(data) {
 		deal_data(data);
 	});
 	productContent("小学");
