@@ -3,7 +3,7 @@
 		"schoolContent":[
 						{"grade":"一年级",
 							"classList":[
-											{"class":"数学", "classHref":"http://localhost:8020/zhaoyangSVN/class/primaryOne_math_result.html?jsId=onemath"},
+											{"subject":"数学", "jsId":"http://localhost:8020/zhaoyangSVN/class/primaryOne_math_result.html?jsId=onemath"},
 											{"class":"语文", "classHref":"http://localhost:8020/zhaoyangSVN/class/primaryOne_math_result.html"}
 										   ]
 						},
