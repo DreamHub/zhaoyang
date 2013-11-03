@@ -128,11 +128,11 @@ a:hover {
 	font-size: 12px;
 	font-weight: normal;
 }
-.newsblock h2 span a:hover, .newsblock table tr td a:hover, .studesc a:hover {
+.newsblock h2 span a:hover, .newsblock table tr td a:hover, .studesc a:hover ,.students h2 span a:hover,.goodclasses h2 span a:hover,.faqblock h2 span a:hover{
 	color: #FF6600;
 }
 .newsblock ul {
-	padding-bottom: 4px;
+	padding-bottom: 6px;
 }
 .newsblock ul li,.faqblock ul li{
 	background: url("../image/index/icon2.jpg") 10px center no-repeat transparent;
@@ -196,6 +196,9 @@ a:hover {
 	margin-top: 7px;
 	padding-bottom: 7px;
 }
+.goodclasses h2,.students h2{
+	border-bottom: 1px solid #BFD9F2;
+}
 .goodclasses h2 span,.faqblock h2 span{
 	display: block;
 	float: right;
@@ -236,6 +239,5 @@ a:hover {
 	padding-bottom: 7px;
 }
 .faqblock h2{
-	padding-top: 2px;
 	border-bottom: 1px solid #BFD9F2;
 }

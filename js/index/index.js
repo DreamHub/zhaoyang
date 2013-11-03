@@ -17,9 +17,9 @@ $(function() {
 		Id : 'img1', //容器ID
 		Bq : 'td', //复制html标签
 		Fx : "left", //方向
-		Time : 10 //时间
+		Time : 15 //时间
 	});
-	/*
+	
 	var map = new BMap.Map("allmap");
 	map.centerAndZoom(new BMap.Point(118.51825419139862, 31.70282984950707), 18);
 	var marker1 = new BMap.Marker(new BMap.Point(118.51825419139862, 31.70282984950707));  // 创建标注
@@ -44,7 +44,7 @@ $(function() {
 		type : BMAP_NAVIGATION_CONTROL_ZOOM
 	}));
 	//右下角，仅包含缩放按钮
-	*/
+	
 });
 function init(id, d1, px1, val1, d2, px2, val2) {
 	$(id).mouseenter(function() {
