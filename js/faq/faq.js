@@ -6,13 +6,32 @@ var curPage = 0;
 $(function() {
 	$.getJSON("js/faq/srfaq.js", function(data) {
 		srs = data;
-		change_page(0);
+		show_page_point(data);
+		change_page(0, data.length);		
 	});
 });
 
-function change_page(i) {
+function show_page_point(data) {
+	var dataLen = data.length;
+	var pageNum = 0;
+	if (dataLen%5 == 0)
+	{
+		pageNum = dataLen/5;
+	} else {
+		pageNum = parseInt(dataLen/5) + 1;
+	}
+	for (var i = 0; i < pageNum; i++)
+	{
+		$('#forPagePoint').append('<a id="page' + i + '" onclick="change_page(' + i*5 + ',' + dataLen + ')" class="a-1 addOrMoveStyle"></a>');
+	}
+
+}
+
+function change_page(i, dataLen) {
+	var maxNum = (i + 5 - dataLen);
+	var pageId = i/5;
 	$('#product-support-faq-ul').empty();
-	for (var j = 0; j < 5; j++, i++) {
+	for (var j = 0; (j < 5)&&(i < dataLen); j++, i++) {
 
 		$('#product-support-faq-ul').append('<li class="li-0"></li>');
 
@@ -27,32 +46,20 @@ function change_page(i) {
 
 		this_li.append('<div onclick="collapseData(this)" class="div-04"><img width="109" height="14" src="image/faq/img_con_cn_faqs_02.jpg" class="collap_data"></div>');
 
-	};
-	if (i == 5) {
-		curPage = 0;
-		$('#page1').removeClass('a-2');
-		$('#page2').removeClass('a-2');
-		$('#page1').addClass('a-1');
-		$('#page2').addClass('a-1');
-		$('#page0').addClass('a-2');
-		$('#page0').removeClass('a-1');
-	} else if (i == 10) {
-		curPage = 1;
-		$('#page1').removeClass('a-1');
-		$('#page2').removeClass('a-2');
-		$('#page1').addClass('a-2');
-		$('#page2').addClass('a-1');
-		$('#page0').addClass('a-1');
-		$('#page0').removeClass('a-2');
-	} else if (i == 15) {
-		curPage = 2;
-		$('#page1').removeClass('a-2');
-		$('#page2').removeClass('a-1');
-		$('#page1').addClass('a-1');
-		$('#page2').addClass('a-2');
-		$('#page0').addClass('a-1');
-		$('#page0').removeClass('a-2');
 	}
+
+	for (var j = 0; j < maxNum; j++) {
+
+		$('#product-support-faq-ul').append('<div style="height:71px"></div>');
+
+	}
+
+	//除去点击的点显示黑色，其他的都不显示黑色，即初始颜色
+	$('.addOrMoveStyle').removeClass('a-2');
+	$('.addOrMoveStyle').addClass('a-1');
+	$('#page'+pageId).addClass('a-2');
+	$('#page'+pageId).removeClass('a-1');
+	
 }
 
 //faq auto expand collapse Data
